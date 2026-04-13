@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions & Discussion
+    url: https://github.com/orgs/commerce-link/discussions
+    about: Ask questions and discuss ideas in GitHub Discussions
+  - name: Security Vulnerability
+    url: https://github.com/commerce-link/.github/blob/main/SECURITY.md
+    about: Report security vulnerabilities via email (do not open a public issue)

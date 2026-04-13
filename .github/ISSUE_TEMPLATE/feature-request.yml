@@ -1,0 +1,60 @@
+name: Feature Request
+description: Suggest a new feature or enhancement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a feature. Please describe the problem and your proposed solution.
+
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      description: Which repository does this apply to? Leave blank if it's a general platform feature.
+      placeholder: e.g., commercelink, invoicing-api
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem does this feature solve? Describe the use case.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How do you think this should work?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other approaches have you considered?
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which area of the platform does this relate to?
+      options:
+        - Core application
+        - Provider API / Plugin system
+        - Payments
+        - Invoicing
+        - Shipping
+        - Marketplace
+        - Supplier / Inventory
+        - PIM (Product Information)
+        - Warehouse
+        - Orders / Fulfilment
+        - UI / Templates
+        - Infrastructure / AWS
+        - Documentation
+        - Other
+    validations:
+      required: true
