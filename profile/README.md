@@ -6,7 +6,21 @@
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-blue.svg)](https://github.com/commerce-link/.github/blob/main/CONTRIBUTING.md)
 [![GitHub Sponsors](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-pink.svg)](https://github.com/sponsors/commerce-link)
 
-**Open-source B2B e-commerce platform** built with Spring Boot 3 and Java 21. Aggregate inventory from multiple suppliers, manage product catalogs, process orders, and integrate with service providers for payments, invoicing, shipping, and marketplaces.
+**The open-source e-commerce platform you actually own.**
+
+CommerceLink is a complete ecosystem for running online and onsite sales. Built with Spring Boot 3 and Java 21, it gives you everything you need to launch a store, manage inventory from multiple suppliers, process orders, handle payments, generate invoices, ship products, and sell on marketplaces — all from a single platform that you fully control.
+
+Unlike SaaS solutions where you rent access and play by someone else's rules, CommerceLink runs on your infrastructure. No monthly fees per transaction. No vendor lock-in. No feature gates. You get the full platform, free for commercial use — see [Licensing](#licensing) for details.
+
+### Why CommerceLink?
+
+- **Truly modular** — every external integration (payments, shipping, invoicing, marketplaces, suppliers) is a standalone module built on the `provider-api` plugin system. Use the ones you need, ignore the rest, or build your own in hours — not weeks.
+- **Multi-supplier from day one** — aggregate inventory feeds from dozens of distributors simultaneously. CommerceLink automatically matches products across suppliers by EAN and manufacturer codes, finds the best prices, and optimizes fulfilment paths.
+- **Scales with your business** — start with a single store and grow to hundreds without reinstalling anything. The platform is multi-tenant by design.
+- **Production-ready** — this is not a hobby project. CommerceLink powers real businesses processing real orders every day. It includes warehouse management, RMA, automated fulfilment, financial reporting, and email notifications out of the box.
+- **Built on proven technology** — Java 21, Spring Boot 3.5, AWS (DynamoDB, S3, SQS, SES). No exotic dependencies. Your team already knows this stack.
+- **Cheap to host** — runs on minimal AWS infrastructure. No expensive licensing, no per-seat fees. Your biggest cost is the AWS bill, and with DynamoDB's on-demand pricing you only pay for what you use.
+- **Make it yours** — fork it, modify it, adapt it to your exact business needs. All provider modules are MIT-licensed with no restrictions. The core application uses BSL 1.1, which allows full customization for your own business — the only limitation is that you cannot resell it as a competing product. No obligation to publish your changes in either case.
 
 > **Coming soon:** `storefront-api` — a provider API for publishing products to popular e-commerce platforms like WooCommerce, Shoper, and others.
 
@@ -130,6 +144,17 @@ We welcome contributions! Please read our [Contributing Guidelines](https://gith
 ## Security
 
 To report a vulnerability, please see our [Security Policy](https://github.com/commerce-link/.github/blob/main/SECURITY.md).
+
+## Get in Touch
+
+We are here to help you succeed with CommerceLink. Reach out to us at **hello@commercelink.pl** if you:
+
+- Need help setting up or deploying the platform
+- Want to discuss a custom integration or provider implementation
+- Have a feature request or want to share feedback
+- Are interested in commercial support or consulting
+
+If you are looking for a fully managed, hosted solution and prefer not to self-host, visit **[commercelink.pl](https://commercelink.pl)**.
 
 ---
 
