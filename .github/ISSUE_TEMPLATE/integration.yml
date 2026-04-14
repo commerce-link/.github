@@ -1,4 +1,4 @@
-name: Integration
+name: Suggest an Integration
 description: Propose a new integration (payment, shipping, invoicing, marketplace, supplier, or storefront)
 labels: ["integration", "enhancement"]
 body:

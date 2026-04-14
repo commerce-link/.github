@@ -1,4 +1,4 @@
-name: Bug Report
+name: Report a Bug
 description: Report a bug in a Commerce Link repository
 labels: ["bug"]
 body:
@@ -67,8 +67,8 @@ body:
       label: Environment
       description: Where does this occur?
       options:
-        - LocalStack (local development)
-        - AWS (production)
+        - Production
+        - Local
         - Both
     validations:
       required: true
@@ -79,9 +79,3 @@ body:
       label: Relevant Logs or Error Messages
       description: Paste any relevant log output or stack traces
       render: shell
-
-  - type: input
-    id: java-version
-    attributes:
-      label: Java Version
-      placeholder: e.g., 21.0.2
