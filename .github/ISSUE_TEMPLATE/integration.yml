@@ -1,0 +1,59 @@
+name: Integration
+description: Propose a new integration (payment, shipping, invoicing, marketplace, supplier, or storefront)
+labels: ["integration", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing a new integration! CommerceLink's plugin architecture makes it straightforward to add new integrations.
+
+  - type: input
+    id: integration-name
+    attributes:
+      label: Integration Name
+      description: Name of the service to integrate
+      placeholder: e.g., PayPal, DHL, Allegro, WooCommerce
+    validations:
+      required: true
+
+  - type: input
+    id: integration-website
+    attributes:
+      label: Website / API Docs
+      description: Link to the service's website or API documentation
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Brief description of the integration and why it would be valuable
+    validations:
+      required: true
+
+  - type: input
+    id: region
+    attributes:
+      label: Country / Region
+      description: What countries or regions does this integration serve?
+      placeholder: e.g., Poland, EU, Global
+
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Are you planning to implement this yourself?
+      options:
+        - Yes, I will submit a PR
+        - I can help but need guidance
+        - No, this is a suggestion
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-details
+    attributes:
+      label: API Details
+      description: Any relevant details about the service's API (REST, SOAP, authentication method, etc.)

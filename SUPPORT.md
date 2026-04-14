@@ -12,7 +12,7 @@ Found a bug? Use the issue tracker in the relevant repository with the appropria
 
 - [Bug Report](https://github.com/commerce-link/.github/issues/new?template=bug-report.yml)
 - [Feature Request](https://github.com/commerce-link/.github/issues/new?template=feature-request.yml)
-- [Provider Implementation](https://github.com/commerce-link/.github/issues/new?template=provider-implementation.yml)
+- [Integration](https://github.com/commerce-link/.github/issues/new?template=integration.yml)
 
 ### Documentation
 

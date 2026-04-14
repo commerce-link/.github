@@ -53,7 +53,7 @@ New to CommerceLink? Look for issues labeled [`good first issue`](https://github
 5. Run existing tests: `mvn test`
 6. Submit a pull request using the PR template
 
-### Creating a New Provider Implementation
+### Creating a New Integration
 
 This is one of the best ways to contribute. To add a new payment, shipping, invoicing, or marketplace provider:
 
@@ -65,7 +65,7 @@ This is one of the best ways to contribute. To add a new payment, shipping, invo
 6. Add a `README.md` describing configuration requirements
 7. Add a `LICENSE` file (MIT)
 
-Use the [Provider Implementation](https://github.com/commerce-link/.github/issues/new?template=provider-implementation.yml) issue template to propose new integrations.
+Use the [Integration](https://github.com/commerce-link/.github/issues/new?template=integration.yml) issue template to propose new integrations.
 
 ## Coding Conventions
 

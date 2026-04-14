@@ -35,26 +35,3 @@ body:
     attributes:
       label: Alternatives Considered
       description: What other approaches have you considered?
-
-  - type: dropdown
-    id: area
-    attributes:
-      label: Area
-      description: Which area of the platform does this relate to?
-      options:
-        - Core application
-        - Provider API / Plugin system
-        - Payments
-        - Invoicing
-        - Shipping
-        - Marketplace
-        - Supplier / Inventory
-        - PIM (Product Information)
-        - Warehouse
-        - Orders / Fulfilment
-        - UI / Templates
-        - Infrastructure / AWS
-        - Documentation
-        - Other
-    validations:
-      required: true
