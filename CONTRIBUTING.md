@@ -79,13 +79,19 @@ Use the [Integration](https://github.com/commerce-link/.github/issues/new?templa
 ### Naming Conventions
 
 **DynamoDB Tables**: PascalCase plural (e.g., `Orders`, `Products`)
+- Acronyms stay uppercase: `RMA` (not `Rma`)
+- No version suffixes (no `V2`)
+- Name reflects what the table stores
 
 **DynamoDB Attributes**: camelCase with specific patterns:
+- Attribute names match Java field names (no shortening)
 - Manufacturer codes: `mfn`
 - Quantities: `qty`
-- Unit prices: `unitPrice`, `unitCost`
-- Timestamps: `{action}At` (e.g., `createdAt`, `orderedAt`)
+- Unit prices/costs: `unitPrice`, `unitCost`
+- Totals without prefix: `totalPrice`, `totalCost`
+- Timestamps: `{action}At` (e.g., `createdAt`, `orderedAt`, `shippedAt`)
 - British spelling: `fulfilment` (not fulfillment)
+- Nested documents: Java field without domain prefix (e.g., `events` not `deliveryEvents`)
 
 **SQS Queues**: `{module}-{domain}-{action}-queue[.fifo]`
 - Singular nouns: `order` not `orders`
