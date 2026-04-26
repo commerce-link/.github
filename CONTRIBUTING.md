@@ -2,22 +2,13 @@
 
 Thank you for your interest in contributing to Commerce Link! This guide will help you get started.
 
-## Prerequisites
-
-- Java 21+
-- Maven
-- [AWS NoSQL Workbench](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.html) (local DynamoDB at `localhost:8000`)
-- [LocalStack](https://localstack.cloud/) (local AWS services at `localhost:4566`)
-- Git
-
 ## Local Development Setup
 
-1. Clone the repository you want to work on
-2. Start AWS NoSQL Workbench (DynamoDB)
-3. Start LocalStack (S3, SQS, SES, EventBridge, Secrets Manager)
-4. Run DynamoDB schema migration: execute `main()` in `commercelink-starter`'s `DynamoDbSchema.java`
-5. Build: `mvn clean compile`
-6. Run tests: `mvn test`
+The full local setup (prerequisites, Docker-based infrastructure, seeded users, run instructions) lives in the main application repository so we keep it in one place. Follow the README there:
+
+- [commerce-link/app — README](https://github.com/commerce-link/app#readme)
+
+Once your local environment is up, return here for contribution guidelines, repository structure, and coding conventions.
 
 ## Repository Structure
 
