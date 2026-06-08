@@ -10,6 +10,30 @@ The full local setup (prerequisites, Docker-based infrastructure, seeded users, 
 
 Once your local environment is up, return here for contribution guidelines, repository structure, and coding conventions.
 
+### Maven `settings.xml` and GitHub Packages
+
+Several modules are published to [GitHub Packages](https://docs.github.com/en/packages/learn-github-packages/introduction-to-github-packages) as Maven artifacts. To resolve those dependencies locally, Maven must authenticate with a Personal Access Token (PAT).
+
+1. Create a GitHub PAT with at least the **`read:packages`** scope. If the packages or repository are private, also grant scope that allows reading that repository (for example **`repo`** for private repos under classic tokens, or the equivalent for a fine-grained token on the relevant repositories).
+2. Add a `<server>` entry whose **`id`** matches the `server-id` used for GitHub Packages in the project POMs (for CI this org uses **`github`** — see the shared publish workflow in this repo).
+3. Put credentials in your **user** Maven settings file, typically `~/.m2/settings.xml`. Do **not** commit tokens or check them into the repository.
+
+Example fragment (replace the placeholders):
+
+```xml
+<settings>
+  <servers>
+    <server>
+      <id>github</id>
+      <username>YOUR_GITHUB_USERNAME</username>
+      <password>YOUR_GITHUB_PAT</password>
+    </server>
+  </servers>
+</settings>
+```
+
+For background on creating tokens, see [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens). After saving `settings.xml`, run `mvn clean install` (or your usual Maven commands) from the project; dependency downloads from GitHub Packages should succeed.
+
 ## Repository Structure
 
 Commerce Link is organized as separate repositories following a plugin-based architecture:
