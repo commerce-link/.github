@@ -43,6 +43,7 @@ Transitioning from single store to multi-store requires no additional installati
 - **Payments** — pluggable payment providers (Stripe, PayNow) with webhook handling
 - **Invoicing** — proforma, advance, standard, final, and credit note invoices via pluggable providers
 - **Shipping** — carrier discovery, shipment estimation, label generation, and tracking
+- **Label printing** — warehouse label generation (ZPL) for Zebra desktop printers, printed client-side via Browser Print
 - **Marketplaces** — order import and offer export to external marketplaces
 - **PIM** — structured product data with health scoring and approval workflow
 - **RMA** — returns management with configurable return centers
@@ -66,6 +67,9 @@ provider-api            Base plugin system: ProviderDescriptor<T>
    |
    +-- shipping-api     ShippingProvider interface
    |      +-- shipping-furgonetka
+   |
+   +-- printing-api     PrintProvider interface
+   |      +-- printing-zebra
    |
    +-- marketplace-api  MarketplaceProvider interface
    |      +-- marketplace-morele
@@ -99,6 +103,7 @@ provider-api            Base plugin system: ProviderDescriptor<T>
 | [invoicing-api](https://github.com/commerce-link/invoicing-api) | [invoicing-fakturownia](https://github.com/commerce-link/invoicing-fakturownia), [invoicing-saldeosmart](https://github.com/commerce-link/invoicing-saldeosmart) | Invoice creation and management |
 | [payments-api](https://github.com/commerce-link/payments-api) | [payments-stripe](https://github.com/commerce-link/payments-stripe), [payments-paynow](https://github.com/commerce-link/payments-paynow) | Payment processing |
 | [shipping-api](https://github.com/commerce-link/shipping-api) | [shipping-furgonetka](https://github.com/commerce-link/shipping-furgonetka) | Shipping and tracking |
+| [printing-api](https://github.com/commerce-link/printing-api) | [printing-zebra](https://github.com/commerce-link/printing-zebra) | Label printing (ZPL for Zebra) |
 | [marketplace-api](https://github.com/commerce-link/marketplace-api) | [marketplace-morele](https://github.com/commerce-link/marketplace-morele), [marketplace-empik](https://github.com/commerce-link/marketplace-empik) | Marketplace integration |
 | [supplier-api](https://github.com/commerce-link/supplier-api) | 14 supplier implementations | Inventory feed aggregation |
 | [pim-api](https://github.com/commerce-link/pim-api) | [pim-commercelink](https://github.com/commerce-link/pim-commercelink) | Product information management |
