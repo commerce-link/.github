@@ -18,6 +18,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      packages: read
+
     services:
       dynamodb:
         image: amazon/dynamodb-local:latest
@@ -34,6 +38,8 @@ jobs:
           java-version: ${{ inputs.java-version }}
           distribution: 'temurin'
           cache: 'maven'
+          server-id: github
+          settings-path: ${{ github.workspace }}
 
       - name: Start LocalStack
         if: ${{ inputs.localstack }}
@@ -42,8 +48,9 @@ jobs:
           image-tag: 'latest'
 
       - name: Run tests
-        run: mvn test -B
+        run: mvn test -B -s ${{ github.workspace }}/settings.xml
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           AWS_ACCESS_KEY_ID: test
           AWS_SECRET_ACCESS_KEY: test
           AWS_DEFAULT_REGION: eu-central-1
